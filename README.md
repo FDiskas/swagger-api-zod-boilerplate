@@ -9,11 +9,7 @@ npm run dev
 
 ### Reproduce steps
 
-1. Run project `npm run dev`
-1. Open browser console
-1. Click on buttone
-1. Check the console and response
-1. Then click one more or multiple times
+1. Install dependencies `npm i`
 
 #### What happens
 
