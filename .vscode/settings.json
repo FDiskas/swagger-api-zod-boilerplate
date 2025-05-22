@@ -1,0 +1,5 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.autoClosingTags": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative"
+}
