@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "swagger-typescript-api generate -p src/gen/fakeapi.yaml -o ./src/gen/fake --clean-output --modular --extract-enums && ts-to-zod ./src/gen/fake/data-contracts.ts ./src/gen/fake/Schemas.ts"
+    "prepare": "swagger-typescript-api generate -p https://fakerestapi.azurewebsites.net/swagger/v1/swagger.json -o ./src/gen/fake --clean-output --modular --extract-enums && ts-to-zod ./src/gen/fake/data-contracts.ts ./src/gen/fake/Schemas.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.76.2",
@@ -16,7 +16,8 @@
     "notistack": "^3.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "zod": "^3.25.20"
+    "simple-react-form": "^4.1.12",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",

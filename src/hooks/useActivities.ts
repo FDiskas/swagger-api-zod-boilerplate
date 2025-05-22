@@ -4,7 +4,7 @@ import { defaultDataConverter } from '@/converters/defaultConverter'
 import { getQueryCacheKey } from '@/helpers/getQueryCacheKey'
 import { useQuery } from '@tanstack/react-query'
 
-export const useActivities = () => {
+export const useActivitiesList = () => {
   return useQuery({
     queryKey: getQueryCacheKey(FakeApiClient.v1ActivitiesList),
     queryFn: FakeApiClient.v1ActivitiesList,

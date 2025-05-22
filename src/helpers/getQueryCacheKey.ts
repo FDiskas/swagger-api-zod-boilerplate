@@ -1,4 +1,4 @@
-export function getQueryCacheKey(name: string | Function, query?: object) {
+export function getQueryCacheKey(name: string | ((...args: never) => unknown), query?: object) {
   const cacheKey: string[] = ['cache']
 
   if (typeof name !== 'function') {
@@ -15,10 +15,7 @@ export function getQueryCacheKey(name: string | Function, query?: object) {
   return cacheKey
 }
 
-const extractApiPath = (apiMethod: Function): string => {
-  if (apiMethod.name != '') {
-    return apiMethod.name
-  }
+const extractApiPath = (apiMethod: (...args: never) => unknown): string => {
   const methodString = apiMethod.toString();
   const pathRegex = /path:\s*`([^`]+)`|path:\s*'([^']+)'|path:\s*"([^"]+)"/;
   const match = methodString.match(pathRegex);
